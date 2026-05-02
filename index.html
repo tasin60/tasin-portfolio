@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasin Shahriar</title>
+    <link rel="icon" type="image/x-icon" href="fav.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root { --primary-blue: #007bff; --dark-bg: #1e1e2f; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; color: #333; overflow-x: hidden; }
+        .navbar { transition: 0.5s; padding: 20px 0; z-index: 1050; }
+        .navbar.scrolled { background: var(--dark-bg); padding: 10px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .carousel-item { height: 100vh; min-height: 500px; background-size: cover; background-position: center; }
+        .carousel-caption { bottom: 25%; z-index: 10; }
+        .carousel-caption h1 { font-size: 4rem; font-weight: 700; animation: fadeInUp 1s ease-out; }
+        section { padding: 100px 0; }
+        .section-title { font-weight: 700; margin-bottom: 50px; position: relative; text-align: center; }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: var(--primary-blue); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+        .card { border: none; border-radius: 15px; transition: 0.4s; overflow: hidden; height: 100%; }
+        .card:hover { transform: translateY(-12px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .skill-badge { background: white; padding: 10px 20px; border-radius: 50px; margin: 5px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: 600; }
+        .contact-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .btn-send { background: var(--primary-blue); color: white; padding: 12px 30px; border-radius: 30px; border: none; transition: 0.3s; font-weight: 600; width: 100%; }
+        .profile-img-container img { transition: transform 0.4s ease; }
+        .profile-img-container img:hover { transform: scale(1.05); }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TASIN SHAHRIAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academic">Academic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image.png');">
+                <div class="carousel-caption">
+                    <h1>Future <span class="text-primary">Engineer</span></h1>
+                    <p class="lead">High School Student | IoT Developer | Problem Solver</p>
+                    <a href="#projects" class="btn btn-primary btn-lg rounded-pill px-5">Explore My Work</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1920');">
+                <div class="carousel-caption">
+                    <h1>AI Crop Physician</h1>
+                    <p class="lead">Detecting crop diseases using ESP32-CAM and TensorFlow.</p>
+                    <a href="#projects" class="btn btn-outline-light btn-lg rounded-pill px-5">View Details</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+
+    <section id="about" class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <div class="profile-img-container">
+                    <img src="profile.png" alt="Student Photo" class="img-fluid rounded-circle shadow-lg border border-5 border-white" style="width: 280px; height: 280px; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 class="fw-bold mb-3">About Me</h2>
+                <p class="lead">I am a dedicated High School student, focusing on my HSC Science stream.</p>
+                <p>Building projects like the <strong>AI Crop Physician</strong> allows me to solve real-world problems in my community using IoT.</p>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <h6 class="text-primary fw-bold"><i class="fas fa-envelope me-2"></i>Email</h6>
+                        <p>tasinshahriar12@email.com</p>
+                    </div>
+                    <div class="col-6">
+                        <h6 class="text-primary fw-bold"><i class="fas fa-map-marker-alt me-2"></i>Location</h6>
+                        <p>Dhaka, Bangladesh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card p-4 shadow-sm">
+                        <div class="mb-3 text-primary"><i class="fas fa-microchip fa-2x"></i></div>
+                        <h4>AI Crop Physician</h4>
+                        <p class="text-muted">An IoT system using ESP32-CAM for automated plant disease detection.</p>
+                        <div class="mt-auto"><span class="badge bg-dark">IoT</span> <span class="badge bg-dark">Python</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4 shadow-sm">
+                        <div class="mb-3 text-primary"><i class="fas fa-code fa-2x"></i></div>
+                        <h4>Web Snake Game</h4>
+                        <p class="text-muted">A Python browser-based game using Pygbag with advanced scoring mechanics.</p>
+                        <div class="mt-auto"><span class="badge bg-dark">Pygame</span> <span class="badge bg-dark">WebAssembly</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academic" class="container">
+        <h2 class="section-title">Academic Records</h2>
+        <div class="row g-4" id="academic-gallery">
+            <div class="text-center py-5"><div class="spinner-border text-primary"></div><p>Loading...</p></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="contact-card">
+                        <h2 class="text-center fw-bold mb-4">Send a Message</h2>
+                        <form id="contactForm">
+                            <div class="mb-3"><label>Name</label><input type="text" name="user_name" class="form-control" required></div>
+                            <div class="mb-3"><label>Email Address</label><input type="email" name="user_email" class="form-control" required></div>
+                            <div class="mb-3"><label>Message</label><textarea name="message" class="form-control" rows="4" required></textarea></div>
+                            <button type="submit" id="submitBtn" class="btn-send">
+                                <span id="btnText">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2026 Tasin Shahriar | <a href="admin.html" class="text-muted text-decoration-none">Admin Login</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        // 1. Initialize EmailJS
+        (function() { emailjs.init("B8QX0Qcm2qhpZOvDW"); })();
+
+        // 2. Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 100) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+
+        // 3. Consolidated Contact Form Logic (Database + Email)
+        const contactForm = document.getElementById('contactForm');
+        const btnText = document.getElementById('btnText');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            btnText.innerText = "Processing...";
+
+            const formData = {
+                data: [{
+                    "Name": this.user_name.value,
+                    "Email": this.user_email.value,
+                    "Message": this.message.value,
+                    "Date": new Date().toLocaleString()
+                }]
+            };
+
+            try {
+                // Step A: Save to Google Sheets
+                const sheetResponse = await fetch('https://sheetdb.io/api/v1/zuux4yhg2vgtz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (sheetResponse.ok) {
+                    // Step B: Send Notification Email
+                    await emailjs.sendForm('service_aie3tub', 'template_dveu6a8', this);
+                    alert("Success! Email sent.");
+                    contactForm.reset();
+                } else {
+                    throw new Error("SheetDB Error");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Success! Email sent.");
+                emailjs.sendForm('service_aie3tub', 'template_dveu6a8', this);
+            } finally {
+                btnText.innerText = "Send Message";
+            }
+        });
+
+        // 4. Load Academic Records
+        async function loadAcademicRecords() {
+            try {
+                const response = await fetch('https://sheetdb.io/api/v1/7242gnuv3w5kb');
+                const data = await response.json();
+                const gallery = document.getElementById('academic-gallery');
+                
+                gallery.innerHTML = data.map(item => `
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="${item.image_url}" class="card-img-top" style="height: 220px; object-fit: cover; cursor: pointer;" 
+                                 alt="Record" onclick="window.open(this.src)">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">${item.category}</span>
+                                <h5 class="card-title">${item.title}</h5>
+                                <p class="card-text text-muted small">${item.result}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error("Error loading data:", error);
+                document.getElementById('academic-gallery').innerHTML = "<p class='text-center'>Failed to load records.</p>";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', loadAcademicRecords);
+    </script>
+</body>
+</html>
